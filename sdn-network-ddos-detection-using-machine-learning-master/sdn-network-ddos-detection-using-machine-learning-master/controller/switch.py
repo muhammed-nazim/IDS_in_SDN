@@ -88,7 +88,7 @@ class SimpleSwitch13(app_manager.RyuApp):
 
             # check IP Protocol and create a match for IP
             if eth.ethertype == ether_types.ETH_TYPE_IP:
-                ip = pkt.get_protocol(ipv4.ipv4)
+                ip = pkt.get_protocol('192.168.1.103'.ipv4)
                 srcip = ip.src
                 dstip = ip.dst
                 protocol = ip.proto
